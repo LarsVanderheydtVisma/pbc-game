@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://d36ees6fbsysy"]
+
+[ext_resource type="Script" path="res://scenes/game.gd" id="1_6weqx"]
+[ext_resource type="Texture2D" uid="uid://ck23yl4ubsstx" path="res://assets/ext-tiles.png" id="1_etgrw"]
+[ext_resource type="PackedScene" uid="uid://cphvoee5es64s" path="res://scenes/spaceship.tscn" id="3_vxbhd"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_34rhl"]
+texture = ExtResource("1_etgrw")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_smvys"]
+sources/0 = SubResource("TileSetAtlasSource_34rhl")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_smvys")
+format = 2
+script = ExtResource("1_6weqx")
+
+[node name="spaceship" parent="." instance=ExtResource("3_vxbhd")]
